@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
     # The most common configuration options are documented and commented below.
     # For a complete reference, please see the online documentation at
     # https://docs.vagrantup.com.
-	config.vm.define "centos_server_static_site" do |centos_server_static_site|
+	config.vm.define "centos_server_static_site_mini_finance" do |centos_server_static_site|
     # Every Vagrant development environment requires a box. You can search for
     # boxes at https://vagrantcloud.com/search.
     centos_server_static_site.vm.box = "eurolinux-vagrant/centos-stream-9"
@@ -32,12 +32,12 @@ Vagrant.configure("2") do |config|
   
     # Create a private network, which allows host-only access to the machine
     # using a specific IP.
-    centos_server_static_site.vm.network "private_network", ip: "192.168.56.20"
+    centos_server_static_site_mini_finance.vm.network "private_network", ip: "192.168.56.20"
   
     # Create a public network, which generally matched to bridged network.
     # Bridged networks make the machine appear as another physical device on
     # your network.
-    centos_server_static_site.vm.network "public_network", bridge: "Dell Wireless 1703 802.11b|g|n (2.4GHz)"
+    centos_server_static_site_mini_finance.vm.network "public_network", bridge: "Dell Wireless 1703 802.11b|g|n (2.4GHz)"
   
     # Share an additional folder to the guest VM. The first argument is
     # the path on the host to the actual folder. The second argument is
@@ -49,7 +49,7 @@ Vagrant.configure("2") do |config|
     # backing providers for Vagrant. These expose provider-specific options.
     # Example for VirtualBox:
     #
-    centos_server_static_site.vm.provider "virtualbox" do |vb|
+    centos_server_static_site_mini_finance.vm.provider "virtualbox" do |vb|
     #   # Display the VirtualBox GUI when booting the machine
     #   vb.gui = true
     #
@@ -63,7 +63,7 @@ Vagrant.configure("2") do |config|
     # Enable provisioning with a shell script. Additional provisioners such as
     # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
     # documentation for more information about their specific syntax and use.
-    centos_server_static_site.vm.provision "shell", inline: <<-SHELL
+    centos_server_static_site_mini_finance.vm.provision "shell", inline: <<-SHELL
        yum install httpd wget unzip vim -y
        systemctl start httpd
        systemctl enabled httpd
