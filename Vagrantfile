@@ -9,10 +9,10 @@ Vagrant.configure("2") do |config|
     # The most common configuration options are documented and commented below.
     # For a complete reference, please see the online documentation at
     # https://docs.vagrantup.com.
-	config.vm.define "centos_server_static_site_mini_finance" do |centos_server_static_site|
+	config.vm.define "centos_server_static_site_mini_finance" do |centos_server_static_site_mini_finance|
     # Every Vagrant development environment requires a box. You can search for
     # boxes at https://vagrantcloud.com/search.
-    centos_server_static_site.vm.box = "eurolinux-vagrant/centos-stream-9"
+    centos_server_static_site_mini_finance.vm.box = "eurolinux-vagrant/centos-stream-9"
   
     # Disable automatic box update checking. If you disable this, then
     # boxes will only be checked for updates when the user runs
